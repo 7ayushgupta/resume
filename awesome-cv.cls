@@ -281,6 +281,10 @@
 % Usage: \email{<email adress>}
 \newcommand*{\email}[1]{\def\@email{#1}}
 
+% Defines writer's emailalt (optional)
+% Usage: \emailalt{<email adress>}
+\newcommand*{\emailalt}[1]{\def\@email{#1}}
+
 % Defines writer's homepage (optional)
 % Usage: \homepage{<url>}
 \newcommand*{\homepage}[1]{\def\@homepage{#1}}
