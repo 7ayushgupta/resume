@@ -1,6 +1,4 @@
-cv.out
-cv.aux
-cv.log
-resume.out
-resume.aux
-resume.log
+*.out
+*.aux
+*.log
+
