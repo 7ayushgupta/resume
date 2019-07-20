@@ -1,0 +1,96 @@
+\cvsection{Work Experience}
+\begin{cventries}
+
+  \cventry
+  {Full Stack Developer, Prof. Manindra Agrawal}
+  {\href{https://yashsriv.org/2016/10/thoughts.html}{New York Office, IIT Kanpur}}
+  {India}
+  {May 2016 - Present}
+  {
+    \begin{cvitems}
+      \item Summer Intern continued as a volunteer \& peer mentor.
+      \item Worked on a scalable web application with an extensive technology
+        stack using Postgres, Couchbase, Kafka, etc.
+      \item	Implemented Notifications, XSRF \& XSSI Protection and batch
+        processing of api requests in the backend API.
+      \item Integrated ProseMirror into an existing Angular App
+      \item Reimplemented an entire Angular application as per the redux
+        architecture for easy extensibility and modularity.
+        \ifdefined \ONEPAGE \else
+      \item Technologies used: Scala with Akka, Couchbase, Angular with TypeScript, Redux
+        \fi
+    \end{cvitems}
+  }
+
+  \cventry
+  {Summer Intern, Prof. Justin Cappos}
+  {\href{https://yashsriv.org/2018/07/nyu.html}{New York University}}
+  {New York City, USA}
+  {May 2018 - July 2018}
+  {
+    \begin{cvitems}
+      \item Worked on setting up an one-shot ansible project to enable
+        organizations to easily set up debian package rebuilding infrastructure
+        for independent verification of packages.
+      \item Implemented three different microservices to orchestrate the entire
+        setup and seamlessly display results via an API.
+    \ifdefined\ONEPAGE
+    \else
+        A builder to rebuild the packages, a visualizer to expose all the
+        metadata \& buildinfo and a scheduler to schedule building of packages.
+        \fi
+      \item Interacted with the reproducible-builds community to get feedback
+        and design decisions approved.
+      \item Added support for ed25519 cryptographic keys to the supply chain security
+        framework - \href{https://in-toto.io/}{in-toto}.
+        \ifdefined \ONEPAGE \else
+      \item Technologies Used: Ansible, Python, Perl, debian build tools
+        \fi
+    \end{cvitems}
+  }
+
+  \cventry
+  {OpenPrinting, The Linux Foundation}
+  {\href{https://yashsriv.org/2017/08/gsoc.html}{Google Summer of Code}}
+  {}
+  {Summer 2017}
+  {
+    \begin{cvitems}
+      \item Worked on the Common Printing Dialog Project.
+      \item Allows easy integration of any new printing systems into existing
+        applications implementing the interface.
+      \item Helped design the DBus API and decide its usage.
+      \item I worked with dbus and implemented the frontend print dialogs to the
+        dbus interface in Libreoffice codebase.
+        \ifdefined \ONEPAGE \else
+      \item Technologies Used: DBus, C++, CUPS, Google Cloud Printing
+        \fi
+    \end{cvitems}
+  }
+
+\ifdefined\ONEPAGE
+\else
+  \cventry
+  {Full Stack Developer}
+  {\href{http://www.localites.com}{Localites}}
+  {Freelance}
+  {Dec 2018 - Apr 2018}
+  {
+    \begin{cvitems}
+    \item Worked on a web application using the MERN stack.
+    \item Rewrote the entire nodejs server in typescript with unit testing in
+      jasmine for better type-checking and code reliability.
+    \item Also rewrote react app into an NgRx based angular app for better code
+      organization and structure.
+    \item Technologies Used: MongoDB, React, NodeJS, Angular
+    \end{cvitems}
+  }
+  \fi
+
+\end{cventries}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-master: "../cv.tex"
+%%% End:
