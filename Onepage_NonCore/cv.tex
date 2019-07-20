@@ -1,0 +1,85 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+\documentclass[10pt, a4paper]{awesome-cv}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-darknight}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo{./profile.png}
+\name{Yash}{Srivastav}
+\position{Senior Undergraduate{\enskip\cdotp\enskip}Computer Science and Engineering}
+\address{Indian Institute of Technology, Kanpur}
+\mobile{(+91) 705-413-3662}
+\email{yash111998@gmail.com}
+\homepage{yashsriv.org}
+\github{yashsriv}
+\linkedin{yashsriv}
+% \twitter{@therealyashsriv}
+% \quote{``There is no fate but what we make."}
+
+\newcommand{\smallcventry}[6]{\cventry{#1}{#2}{#3}{#4}{#6}}
+\newcommand{\specialcvsection}[1]{\cvsection{#1}}
+
+
+
+
+\begin{document}
+\makecvheader
+\makecvfooter
+  {}
+  {}
+  {\thepage}
+
+\input{sections/education.tex}
+\input{sections/academic.tex}
+\input{sections/experience.tex}
+\input{sections/skills.tex}
+\input{sections/coursework.tex}
+\newpage
+\input{sections/project.tex}
+\input{sections/positions.tex}
+\input{sections/misc.tex}
+% \input{sections/interests.tex}
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% End:
