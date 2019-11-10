@@ -1,0 +1,290 @@
+%% start of file `cv.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%% Modifications 2017 Mayank Mittal (mayankm.iitk@gmail.com)
+%% Modifications 2019 Ayush Gupta (7ayushgupta@gmail.com)
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+%%----------- NEW COLOR---------------------
+\RequirePackage{filecontents}
+\begin{filecontents*}{moderncvcolorburgundy.sty}
+%% start of file `moderncvcolorburgundy.sty'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{moderncvcolorburgundy}[2013/02/09 v1.3.0 modern curriculum vitae and letter color scheme: burgundy]
+
+\definecolor{color0}{rgb}{0,0,0}% black
+\definecolor{color1}{rgb}{0.545098,0,0}% burgundy
+\definecolor{color1}{rgb}{0.4,0.4,0.4} % Testcolor-------being used
+\definecolor{color2}{rgb}{0.45,0.45,0.45}% grey
+\endinput
+%% end of file `moderncvcolorburgundy.sty'.
+\end{filecontents*}
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\renewcommand{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+%\usepackage[scale=0.75]{geometry}
+\usepackage[left=0.65 in,top=0.7in,right=0.65in,bottom=0.7in]{geometry} % Document margins
+
+\setlength{\hintscolumnwidth}{2.8cm}                % if you want to change the width of the column with the dates
+
+% personal data
+\name{Ayush}{Gupta}
+
+%\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+91~9140290418}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{ayushgup@iitk.ac.in}                               % optional, remove / comment the line if not wanted
+\homepage{7ayushgupta.github.io.com}                         % optional, remove / comment the line if not wanted
+\social[linkedin]{7ayushgupta}                        % optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+\social[github]{7ayushgupta}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+%_------- PACKAGES FROM ANOTHER
+\usepackage{array}
+\usepackage{tabulary}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fontawesome}
+\usepackage{calrsfs}\usepackage[english]{babel}
+
+%--- MODIFY SECTION STYLE
+% \makeatletter
+% \renewcommand\sectionfont{\bfseries}
+% \renewcommand*{\sectionstyle}[1]{{%
+%   \sectionfont\rule[-.5ex]{0pt}{0em}\MakeUppercase{#1}}}
+% \makeatother
+
+%% use \scshape in all section titles
+\renewcommand{\sectionfont}{\normalfont\Large\mdseries\scshape}
+
+%---------- REMOVE DOT
+\usepackage{xpatch}
+\xpatchcmd{\cventry}{.\strut}{\strut}{}{}
+
+%LINK COLOR
+\newcommand\Colorhref[3][blue]{\href{#2}{\small\color{#1}#3}}
+
+%----------------------------------------------------------------------------------
+%            content
+%--------------------------------------------------------------------------------
+
+\begin{document}
+
+%-----       resume       --------------------------------------------------------
+
+%\makecvtitle
+{\fontsize{0.9cm}{1cm}\selectfont {AYUSH GUPTA }} \hfill \textbf{E-mail: }ayushgup@iitk.ac.in\\
+Junior, Dept. of Mechanical Engineering, IIT Kanpur, India\hfill \textbf{Github: }\Colorhref{https://github.com/7ayushgupta}{7ayushgupta} \\ {Address: A206, Hall 12, IIT Kanpur, Kalyanpur - 208016}\hfill \textbf{Mobile:} +91-91402-90418}\\
+\noindent\rule[1ex]{\linewidth}{1pt}
+
+\vspace{-7pt}
+
+\section{Education}
+\cventry{2017--present}{Bachelor of Technology}{Indian Institute of Technology}{Kanpur}{\textit{CGPA- 9.0*/10}}{Major in Mechanical Engineering with Minor in Industrial \& Management Engineering}  % arguments 3 to 6 can be left empty
+
+\cventry{2017}{Grade XII}{City Montessori School}{Lucknow}{\textit{Result: 95.5\%}}{}
+\cventry{2015}{Grade X}{St. Francis College}{Lucknow}{\textit{Result: 95\%}}{}
+
+\section{Research Experience}
+
+\cventry{Aug '19--present}{Orbital Debris Mitigation through guided solar sails}{}{}{}{
+\textit{Intelligent Guidance \& Control Laboratory,} Supervisor: Prof. Mangal Kothari
+% \newline
+\begin{itemize}%
+\item Simulated a model of the atmosphere using N-body particle simulator, \textbf{Rebound}
+\item Used probabistic debris data from European Space Agency's MASTER, analysed the decay of particle orbits in presence of guiding satellites considering solar radiation effects and gravity
+\end{itemize}}
+
+\vspace{4pt}
+
+\cventry{May '18--present \\
+\Colorhref{https://arxiv.org/abs/1903.00494}{design report}\\
+\Colorhref{https://github.com/AUV-IITK}{github}\\}
+{Autonomous Underwater Vehicle (AUV)}{}{}{}{
+\textit{IIT Kanpur}, Mentor: Prof. Mangal Kothari
+\begin{itemize}
+\item Brainstormed a \textbf{hierarchical state machine} for robust autonomous behavior of the vehicle
+\item Solved the localization problem using modified \textbf{landmark-based FastSLAM} implementation 
+\item Setup robust \textbf{underwater computer vision pipeline} using Deep Learning \& traditional IP
+\begin{itemize}
+    \item Created \textbf{multi-class dataset} of labeled underwater photos, trained and evaluated custom \& YOLO object detection models, setup realtime inference on Jetson TX2 
+    \item Implemented a image preprocessing algorithm based on of \textbf{pixel-based fusion} technique
+\end{itemize}
+\item Simulated the model of vehicle in a custom-designed \textbf{hydrodynamically realistic} environment programmed on Gazebo, with underwater currents and fluid drag
+\item Created an acoustic localization system capable of estimating the Direction of Arrival of ultrasonic signals from pinger using signal processing operations, \texttt{STFT \& Cross-Correlation}
+\end{itemize}}
+
+\vspace{4pt}
+
+\cventry{May '19--Oct '19 \\
+\Colorhref{http://7ayushgupta.github.io/realtime-dense-mapping-draft.pdf}{draft}}{Realtime Onboard Dense RGB-D Mapping on Unmanned Aerial Vehicles}{}{}{}{
+\textit{Intelligent Guidance \& Control Laboratory,} Supervisor: Prof. Mangal Kothari
+% \newline
+\begin{itemize}%
+% \renewcommand\labelitemi{--}
+\item \textbf{Benchmarked} various approaches such as \texttt{REMODE \& RTAB-Map} against their computational and energy requirements, and modified publically available codes to process RGB pointclouds
+\item Performed a literature review of different approaches related to \textbf{3D mapping} of the environment, in particular, using monocular and stereo cameras on a Jetson TX2 onboard  
+\end{itemize}}
+
+\cventry{Dec '17--Apr '18 \\
+\Colorhref{https://github.com/7ayushgupta/Humanoid-IITK}{github}\\}
+{Design \& development of bipedal protoype of kid-sized humanoid}{}{}{}{
+\textit{IIT Kanpur}, Supervisor: Prof. Ashish Dutta
+\begin{itemize}%
+\item Worked on the walking mechanism of humanoid, capable of performing statically stable walking
+\item Implemented the MATLAB simulated \textbf{inverse kinematics} walking algorithm based on zero moment point (ZMP) criteria on the actual robot using ROS
+\item Developed a web-enabled graphical user interface for debugging and \textbf{monitoring diagnostics} along with realtime status of the robot using ROS web-bridge server, JavaScript and CSS
+\end{itemize}}
+
+\section{Selected Projects}
+
+\cventry{June '19\\
+%\Colorhref{https://github.com/7ayushgupta/park-the-bus}{github}\\
+\Colorhref{https://7ayushgupta.github.io/aviato.pdf}{report}}{Identifying Parking Spaces for smart cities using Computer Vision }{}{}{}{
+\textit{Submission for TechGig Artificial Intelligence Challenge 2019, Online round}
+\begin{itemize}%
+\item Preprocessed the robust \textbf{PKLot dataset} for Parking Lot Classification comprising of over \textbf{600k+ segmented images}, from 12k+ images of parking lots in varied conditions
+\item Used a regular CNN-model for \textbf{binary classification} of vacancy of parking space, and \textbf{saliency maps} for finding parking spaces in the image of a parking lot
+\end{itemize}}
+
+\cventry{Apr--Jul '19\\
+\Colorhref{https://www.mbzirc.com/}{website}}{Mohammad Bin Zayed International Robotics Challenge 2020}{}{}{}{
+\textit{Intelligent Systems Lab}, Supervisor: Prof. Laxmidhar Behera%
+\begin{itemize}%
+% \renewcommand\labelitemi{--}
+%\item Ported outdated available ROS code to operate on current development platform
+\item Actualized simulation setup using \texttt{MoveIt \& Gazebo} for UR5 manipulator on Guardian Robot
+\item Implemented localization using occupancy maps, along with \textbf{RRT-based} motion planning
+\item Final objective to create collaborative autonomous robots capable of building walls, extinguishing fires in unknown environments for \textbf{MBZIRC} Challenge 2020, in Abu Dhabi
+\end{itemize}}
+
+\vspace{3pt}
+
+\cventry{May--Jul '18\\
+\Colorhref{https://www.gmantra.org}{website}}{New York Office, IIT Kanpur}{}{}{}{
+\textit{Backend Intern}, Supervisor: Prof. Manendra Agarwal
+\begin{itemize}%
+\item Worked on \texttt{Scala \& Akka} for a scalable concurrent multi-threading website backend
+\item Documented the entire collection of Application Programming Interfaces using PostMan
+\item Fixed bugs present in large codebase while developing an upcoming social platform, \textbf{gmantra}
+\end{itemize}}
+
+\vspace{3pt}
+
+\cventry{Jan--Apr '18\\
+\Colorhref{https://github.com/7ayushgupta/ESC101-Project-Track}{github}\\
+\Colorhref{https://github.com/7ayushgupta/ESC101-Project-Track/blob/master/Documentation/ESC101-FInal-Presentation.pdf}{report}}{Development of a secure web-based chat client}{}{}{}{
+\textit{Course Project for Fundamentals of Computing (ESC101A)}, Prof. Puroshottam Kar
+\begin{itemize}%
+\item Designed and developed a \textbf{chat application} on NodeJS, Express, Socket-IO, and MongoDB
+\item Implemented realtime chat using Socket-IO with PassportJS for extensively implemented \textbf{authentication} \& cookie handling for secure \textbf{session management}
+\item Database management implemented using MongoDB, and application deployed on Heroku
+\end{itemize}}
+
+}
+
+\section{Academic Achievements}
+\cvitem{2019}{Participated in AUV competition, \textbf{RoboSub} by AUVSI Foundation in San Diego}
+\cvitem{2019}{$\mathbf{2^{nd}}$ \textbf{place} in \textbf{Student Underwater Vehicle} (SAVe) competition by NIOT, Chennai}
+\cvitem{2017}{\textbf{All India Rank 1075} in JEE Advanced among 200,000 students}
+\cvitem{2017}{\textbf{Top 0.01\% in country,} in JEE Mains among 1.6 million students}
+\cvitem{2015 \& 16}{\textbf{Top 1\% in country,} National Standard Examination in Astronomy, India}
+\cvitem{2016}{\textbf{Top 1\% in state,} National Standard Examination in Physics, India}
+\cvitem{2016}{\textbf{Top 1\% in country,} National Standard Examination in Chemistry, India}
+
+\section{Technical skills}
+\cvitem{\textbf{Software:}}{Gazebo, Unity3D, SolidWorks, MATLAB, Octave, LabView}
+\cvitem{\textbf{Languages:}}{Python, C++, CUDA, C, Shell (bash), JavaScript, Java, Scala, C\#, Lua}
+\cvitem{\textbf{Frameworks:}}{ROS, OpenCV, Tensorflow, Pytorch}
+\cvitem{\textbf{Development:}}{SocketIO, NodeJS, Express, Flask, CSS, HTML}
+\cvitem{\textbf{Platforms:}}{NVidia Jetson TX2, Raspberry Pi, Arduino, Odroid, NI Data Acquisition Board}
+\cvitem{\textbf{Other:}}{Git, GNU Octave, \LaTeX}
+
+\section{Relevant Coursework}
+\cvitem{\textbf{Robotics:}}{Introduction to Robotics (\textit{i}), CNNs for Visual Recognition (Stanford University, online)}
+\cvitem{\textbf{Mathematics:}}{Probability and Statistics, Ordinary/Partial Differential Equations, Complex Analysis}
+\cvitem{\textbf{Algorithms:}}{Data Structures and Algorithms (\textit{i}), Fundamentals of Programming (*)}
+\cvitem{\textbf{Mechanics:}}{Mechanics Of Solids, Dynamics, Fluid Mechanics, Introduction to Machine Design (*)}
+\cvitem{}{\hfill \small{\textit{(i) to be completed in Fall 2019, (*): exceptional performance in course}}}
+
+\section{Positions of Responsibility}
+
+\cventry{April '19--present}{Software Team Lead}{AUV Team}{IIT Kanpur}{}{
+\begin{itemize}%
+% \renewcommand\labelitemi{--}
+\item Maintaining entire stack of an Autonomous Vehicle, deployed on Git, implemented using ROS, OpenCV and simulation integrated using Gazebo, while leading a group of 10 members
+\item Participating in international robotics competitions, RoboSub 2020 \& Virtual RobotX 2019
+\end{itemize}}
+
+\cventry{Apr '18--Mar '19}{Secretary}{Robotics Club}{IIT Kanpur}{}{
+\begin{itemize}%
+\item Managed club website, prepared lectures on robotics, \& organized competitions for community
+\end{itemize}}
+
+\cventry{Apr '18--Mar '19}{Student Guide \& Academic Mentor}{Counseling Service}{IIT Kanpur}{}{
+\begin{itemize}%
+% \renewcommand\labelitemi{--}
+\item Assisted six freshmen students in adjusting to the college environment, providing guidance
+\item Provided personal tutoring to academically weak students for their courses in Mathematics
+\end{itemize}}
+
+\cventry{Apr '18--Mar '19}{Secretary}{Consulting Club}{IIT Kanpur}{}{
+\begin{itemize}%
+\item Successfully prepared and delivered lecture to the campus community on introductory Machine Learning and Data Science
+\item Founding member of the Hobby Group, aiming to work on outsourced consulting projects, with emphasis on insights from collected data
+\end{itemize}}
+
+\section{Miscellaneous}
+\cvitem{Aug '19}{Currently involved in preliminary phases of startup in \textbf{Orbital Debris Mitigation}}
+\cvitem{Oct '18}{Conducted a lecture on \textbf{'Introduction to Machine Learning'} for campus community}
+\cvitem{Sep '18}{Secured $2^{nd}$ place at intra-college robotics tournament held in IIT Kanpur} 
+\cvitem{Mar '18}{Demonstrated application generated summaries of the latest news based on the \textbf{current trending hashtags} on Twitter using Natural Language Processing [\Colorhref{https://github.com/umang-malik/code.fun.do}{github}]} 
+\cvitem{Jan '15}{Developed basic side-scrolling platform game while in high school on \textbf{Unity3D} [\Colorhref{https://github.com/7ayushgupta/UnityGame}{github}]}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%   to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\end{document}
